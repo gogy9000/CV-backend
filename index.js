@@ -19,6 +19,11 @@ let transporter = nodemailer.createTransport({
         pass: smtp_password, // здесь должен быть пароль приложения, а не  пароль аккаунта, друг...
     },
 });
+
+app.get("/",(req,res)=>{
+    res.send("it's ok")
+})
+
 app.post('/sendMail', async function (req, res) {
     res.send('azaza');
     try {
